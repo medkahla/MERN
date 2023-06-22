@@ -1,0 +1,35 @@
+.header{
+    background-color: #6aa846;
+    height: 100px;
+    width: 95%;
+    margin: 10px;
+}
+
+.navigation{
+    background-color: #6fa8dc;
+    width: 30%;
+    height: 500px;
+}
+
+.main{
+    background-color: #e06666;
+    width: 60%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.subcontent{
+    background-color: #ffd966;
+    width: 30%;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.advertisement{
+    background-color: #b4a7d6;
+    width: 95%;
+    margin-bottom: 20px;
+
+}
