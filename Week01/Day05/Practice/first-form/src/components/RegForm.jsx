@@ -27,7 +27,7 @@ const RegForm = () => {
               {passsword.length > 1 && (passsword.length < 8 && <p style={{color:"red"}}>"Too Short"</p>)}
               <label htmlFor="ConfirmPassword">Confirm Password</label>
               <input type='password' onChange={(e) => {setConfirmPasssword(e.target.value)}}/> <br />
-              { passsword != confirmPasssword && <p style={{color:"red"}}>"They must match !!!"</p>}
+              { passsword !== confirmPasssword && <p style={{color:"red"}}>"They must match !!!"</p>}
               <button>Submit</button>
             </form>
 
