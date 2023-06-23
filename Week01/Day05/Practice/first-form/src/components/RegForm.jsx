@@ -15,14 +15,19 @@ const RegForm = () => {
             <form>
               <label htmlFor="FirstName">First Name</label>
               <input onChange={(e) => {setFirstName(e.target.value)}}/> <br />
+              {firstName.length > 0 && (firstName.length < 2 && <p style={{color:"red"}}>"Too Short"</p>)}
               <label htmlFor="LastName">Last Name</label>
               <input onChange={(e) => {setLastName(e.target.value)}}/> <br />
+              {lastName > 0 && (lastName.length < 2 && <p style={{color:"red"}}>"Too Short"</p>)}
               <label htmlFor="Email">Email</label>
               <input type='email' onChange={(e) => {setEmail(e.target.value)}}/> <br />
+              { email.length > 1 && (email.length < 5 && <p style={{color:"red"}}>"Too Short"</p>)}
               <label htmlFor="Password">Password</label>
               <input type='password' onChange={(e) => {setPasssword(e.target.value)}}/> <br />
+              {passsword.length > 1 && (passsword.length < 8 && <p style={{color:"red"}}>"Too Short"</p>)}
               <label htmlFor="ConfirmPassword">Confirm Password</label>
               <input type='password' onChange={(e) => {setConfirmPasssword(e.target.value)}}/> <br />
+              { passsword != confirmPasssword && <p style={{color:"red"}}>"They must match !!!"</p>}
               <button>Submit</button>
             </form>
 
