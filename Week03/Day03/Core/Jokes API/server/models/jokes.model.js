@@ -10,9 +10,10 @@ const JokeSchema = new mongoose.Schema({
         type: String,
         required: [true, "Punchline is required"],
         minlength: [1, "It can't be a joke without punchline!"]
-    },
-    timestamps: true
-});
+    }
+},
+{timestamps:true}
+);
  
 const Joke = mongoose.model('Joke', JokeSchema);
  
