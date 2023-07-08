@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Main from './components/Main';
 import AddForm from './components/AddForm';
+import OneProduct from './components/OneProduct';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/product/new' element={<AddForm />} />
+        <Route path='/product/:id' element={<OneProduct />} />
       </Routes>
     </div>
   );

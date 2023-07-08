@@ -1,5 +1,6 @@
 import React , { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const AllProducts = () => {
     const [products , setProducts] = useState([])
@@ -22,7 +23,6 @@ const AllProducts = () => {
                 <tr>
                 <th>Title</th>
                 <th>Price</th>
-                <th>Description</th>
                 <th>Actions</th>
                 </tr>
             </thead>
@@ -30,9 +30,10 @@ const AllProducts = () => {
                 {products.map((oneProduct)=>{
                     return(
                         <tr key={oneProduct._id}>
-                            <td>{oneProduct.title}</td>
+                            <Link to={`/product/${oneProduct._id}`}>
+                                <td>{oneProduct.title}</td>
+                            </Link>
                             <td>{oneProduct.price} $</td>
-                            <td>{oneProduct.description}</td>
                             <td>
                             <button type="button" className="btn btn-success" style={{marginRight:8+'px'}}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-pencil-square" viewBox="0 0 16 16">
