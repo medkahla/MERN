@@ -7,9 +7,9 @@ const Main = () => {
     <div>
         <div className='container'>
         <div className='d-flex justify-content-end'>
-        <Link to="/product/new">
-          <button className="btn btn-outline-primary">Add product</button>
-        </Link>
+            <Link to="/product/new">
+                <button className="btn btn-outline-primary">Add product</button>
+            </Link>
         </div>
         <AllProducts />
       </div>

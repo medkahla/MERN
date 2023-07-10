@@ -28,6 +28,7 @@ const AddForm = () => {
 
   return (
     <div className='container'>
+        <h2>Adding New Product</h2>
         <form onSubmit={hundleForm}>
             <div>
                 <label className="form-label">Title</label>
